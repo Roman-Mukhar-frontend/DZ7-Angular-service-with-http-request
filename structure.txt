@@ -1,0 +1,16 @@
+app/
+    components/
+        header.component
+        footer.component
+    pages/
+        blog.component
+    shared/
+        styles/
+            _variables.scss
+            _mixins.scss
+            _base.scss
+        interfaces/
+        services/
+        pipes/
+    admin.component
+        admin-blogs.component

@@ -1,0 +1,29 @@
+@import '../../shared/styles/base';
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog {
+    width: 30%;
+    margin: 15px;
+    margin-bottom: 30px;
+}
+
+.author {
+    color: aqua;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 48px;
+    margin-top: 50px;
+}

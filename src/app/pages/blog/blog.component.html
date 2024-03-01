@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <ng-container *ngIf="userBlogsArr.length > 0">
+        <div class="blog" *ngFor="let blog of userBlogsArr">
+            <img [src]="blog.imagePath" class="card-img-top" alt="...">
+            <p class="author">{{blog.author}}
+            <p>
+            <p class="title">{{blog.title}}</p>
+            <p >{{blog.text}}</p>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="userBlogsArr.length === 0">
+        <h1 class="text">Posts not added yet</h1>
+    </ng-container>
+</div>

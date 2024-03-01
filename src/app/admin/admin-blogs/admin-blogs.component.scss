@@ -1,0 +1,19 @@
+@import '../../shared/styles/base';
+@import '../../shared/styles/variables';
+
+.wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+.left-text {
+    background-color: $primary;
+    padding: 15px;
+    color: white;
+    border-radius: 5px;
+}
+
+.tr {
+    height: 40px;
+}

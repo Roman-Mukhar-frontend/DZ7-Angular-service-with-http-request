@@ -1,0 +1,32 @@
+@import '../../shared/styles/base';
+@import '../../shared/styles/variables';
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $primary;
+    color: white;
+    padding: 15px;
+}
+.header_left{
+    display: flex;
+}
+.header_left_href{
+    margin-right: 15px;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.header_left_href:hover{
+    color:goldenrod;
+}
+.active{
+    background-color: white;
+    border-radius: 5px;
+    color: $primary;
+}

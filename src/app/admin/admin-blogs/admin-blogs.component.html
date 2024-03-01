@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div class="left col-2">
+        <div class="left-text">Blogs</div>
+    </div>
+    <div class="right col-10 ps-3">
+        <div class="mb-3">
+            <input type="text" class="form-control" 
+            placeholder="title here..." [(ngModel)]="title">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" rows="3" 
+            placeholder="text here..." [(ngModel)]="text"></textarea>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" 
+            placeholder="author here..." [(ngModel)]="author">
+        </div>
+
+        <input *ngIf="!editStatus" type="button" class="btn btn-dark" 
+        value="Add" (click)="addNewBlog()"
+        [disabled]="!title || !text || !author">
+        <input *ngIf="editStatus" type="button" class="btn btn-dark" 
+        value="Save" (click)="saveEditBlog()"
+        [disabled]="!title || !text || !author">
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="tr" *ngFor="let blog of adminBlogsArr">
+                    <td>{{blog.id}}</td>
+                    <td>{{blog.title}}</td>
+                    <td>{{blog.text}}</td>
+                    <td>{{blog.author}}</td>
+                    <td>
+                        <input type="button" class="btn btn-primary" 
+                        value="Edit" (click)="editBlog(blog)">
+                    </td>
+                    <td>
+                        <input type="button" class="btn btn-danger" 
+                        value="Delete" (click)="deleteBlog(blog)"
+                        [disabled]="editStatus">
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
